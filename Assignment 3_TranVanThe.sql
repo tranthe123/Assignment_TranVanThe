@@ -34,8 +34,8 @@ CREATE TABLE        Department
  DepartmentID    TINYINT NOT NULL,
  PositionID      TINYINT NOT NULL,
  CreateDate      DATETIME DEFAULT NOW() ,
- FOREIGN KEY (DepartmentID) REFERENCES `Department` (DepartmentID)ON DELETE CASCADE/ON UPDATE CASCADE,
- FOREIGN KEY (PositionID) REFERENCES `Position` (PositionID)
+ FOREIGN KEY (DepartmentID) REFERENCES `Department` (DepartmentID)ON DELETE CASCADE ON UPDATE CASCADE,
+ FOREIGN KEY (PositionID) REFERENCES `Position` (PositionID)ON DELETE CASCADE ON UPDATE CASCADE
   );
 -- create table4: Group
 
@@ -91,8 +91,8 @@ CREATE TABLE        Department
  TypeID          TINYINT NOT NULL,
  CreatorID       TINYINT NOT NULL,
  CreateDate      DATETIME DEFAULT NOW(),
- FOREIGN KEY (CategoryID) REFERENCES `CategoryQuestion`(CategoryID),
- FOREIGN KEY (TypeID) REFERENCES `TypeQuestion`(TypeID)
+ FOREIGN KEY (CategoryID) REFERENCES `CategoryQuestion`(CategoryID) ON DELETE CASCADE ON UPDATE CASCADE,
+ FOREIGN KEY (TypeID) REFERENCES `TypeQuestion`(TypeID) ON DELETE CASCADE ON UPDATE CASCADE
   );
   
 -- create table9: Answer
@@ -104,7 +104,7 @@ CREATE TABLE        Department
  Content         VARCHAR(100) NOT NULL,
  QuestionID      TINYINT NOT NULL,
  isCorrect       ENUM('True','False'),
- FOREIGN KEY (QuestionID) REFERENCES `Question`(QuestionID) 
+ FOREIGN KEY (QuestionID) REFERENCES `Question`(QuestionID) ON DELETE CASCADE ON UPDATE CASCADE
   );
   
     -- create table10: Exam
@@ -119,7 +119,7 @@ CREATE TABLE        Department
  Duration      DATETIME DEFAULT NOW(),
  CreatorID     TINYINT,
  CreateDate    DATETIME DEFAULT NOW(),
- FOREIGN KEY (CategoryID) REFERENCES CategoryQuestion(CategoryID)
+ FOREIGN KEY (CategoryID) REFERENCES CategoryQuestion(CategoryID) ON DELETE CASCADE ON UPDATE CASCADE
   );
   
 -- create table11: ExamQuestion
@@ -129,8 +129,8 @@ CREATE TABLE        Department
 (
  ExamID        TINYINT AUTO_INCREMENT ,
  QuestionID      TINYINT,
- FOREIGN KEY(QuestionID) REFERENCES Question(QuestionID),
- FOREIGN KEY(ExamID) REFERENCES Exam(ExamID),
+ FOREIGN KEY(QuestionID) REFERENCES Question(QuestionID) ON DELETE CASCADE ON UPDATE CASCADE,
+ FOREIGN KEY(ExamID) REFERENCES Exam(ExamID) ON DELETE CASCADE ON UPDATE CASCADE,
  PRIMARY KEY(ExamID,QuestionID)
   );
 
