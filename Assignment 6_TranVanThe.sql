@@ -188,7 +188,7 @@ BEGIN
     )
 	DELETE
     FROM 	Exam
-    WHERE 	ExamID = (SELECT * FROM Exam3YearAgor);
+    WHERE 	ExamID = (SELECT * FROM Exam3YearAgo);
    -- GỌI RA NHỮNG DÒNG ĐÃ BỊ THAY ĐỔI TRONG CÂU LỆNH TRƯỚC.
    -- DELETE|UPDATE|INSERT
   SELECT ROW_COUNT();                   
