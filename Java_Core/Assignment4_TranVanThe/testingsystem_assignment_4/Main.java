@@ -47,6 +47,7 @@ public class Main {
 //e) Thoát khỏi chương trình.
         ArrayList<CanBo> canboList = new ArrayList();
         int choose;
+        CanBo canbo = null;
         Scanner sc = new Scanner(System.in);
         do{
         showMenu();
@@ -57,17 +58,36 @@ public class Main {
                     int n;
                     System.out.println("Nhập số cán bộ cần thêm:");
                     n = Integer.parseInt(sc.nextLine());
+                    System.out.println("Nhập thông tin chi tiết:");
                     for(int i = 0; i< n;i++){
-                    CanBo canbo = new CanBo();
+                        System.out.println("Chon cán bộ (1: Công nhân; 2: Kỹ sư; 3: Nhân viên) :" );
+                        int chon = sc.nextInt();
+                    canbo = new CanBo();
+                    switch(chon){
+                        case 1:
+                         canbo = new Worker();
+                            break;
+                        case 2:
+                            canbo = new Engineer();
+                            break;
+                        case 3:
+                            canbo = new Staff();
+                            break;
+                        default :
+                            System.out.println("Nhap sai! moi nhap lai:");
+                            break;    
+                    }
+                    // nhap can bo
                     canbo.nhap();
+                    //them can bo vao danh sach
                     canboList.add(canbo);
+                   
                     }
                     break;
                case 2:
                     System.out.println("Nhập họ tên cần tìm kiếm: ");
                     String fullNameSearch = sc.nextLine();
                     for (int i = 0; i < canboList.size(); i++) {
-                         CanBo canbo = new CanBo();
                         if(canbo.getFullName().equalsIgnoreCase(fullNameSearch)){
                         canbo.xuat();
                         }
@@ -87,12 +107,12 @@ public class Main {
                     
                     n = Integer.parseInt(sc.nextLine());
                     for(int i = 0; i< n;i++){
-                    CanBo canbo = new CanBo();
                     canbo.nhap();
                     canboList.add(canbo);
+                   
                     for(int j =0;j < canboList.size();j++){
                      if(j == i){
-                      canboList.remove(j);
+                      canboList.remove(canbo);
                       break;
                      }
                     }
@@ -116,13 +136,6 @@ public class Main {
         System.out.println("4. Nhập vào tên của cán bộ và delete cán bộ đó");
         System.out.println("5. Thoát khỏi chương trình");
     }
-    //Question 3
-//    public  void HighSchoolStudent(){
-//         HighSchoolStudent hss = new HighSchoolStudent();
-//                 hss.id = 1;
-//                 hss.name = "Nam";
-//                 hss.clazz ="Chuyên Văn";
-//                 hss.desiredUniversity ="Đại học công nghệ";
-//    }
+    
     //Question 4:
 }

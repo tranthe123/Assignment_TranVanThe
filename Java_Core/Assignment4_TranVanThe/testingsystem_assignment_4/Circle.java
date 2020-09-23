@@ -41,8 +41,11 @@ public class Circle {
     public void setColor(String color) {
         this.color = color;
     }
-    public void getArea() {
+    public double getArea() {
+        return 0;
         
     }
-    
+    public String toString(){
+        return null;
+    };
 }

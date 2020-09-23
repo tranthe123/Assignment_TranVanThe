@@ -32,7 +32,13 @@ public class Account {
     public int getBalance() {
         return balance;
     }
-//     public Credit( int amount) {
-//        this.amount = amount;
-//    }
+ public int debit() {
+        return 0;
+     
+ }   
+ public void tranferTo(Account account, int amount) {
+        
+     
+ }   
+
 }
