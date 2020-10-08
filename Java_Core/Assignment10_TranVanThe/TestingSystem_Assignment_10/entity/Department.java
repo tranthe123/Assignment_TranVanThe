@@ -1,10 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-package entity;
+package testingsystem_assignment_10.entity;
 
 /**
  *
@@ -33,9 +27,10 @@ public class Department {
 
 	@Override
 	public String toString() {
-		return "Department{" + "id=" + departmentID + ", name='" + departmentName + '\'' + '}';
+		String result = "Department{" + "id=" + departmentID + ", name='" + departmentName + '\'' + '}';
+                        returen result;
 	}
 
 
-    
-}
+	}
+

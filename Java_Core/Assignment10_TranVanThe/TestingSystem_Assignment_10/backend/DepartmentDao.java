@@ -1,10 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-package backend;
+package testingsystem_assignment_10.backend;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -16,24 +10,31 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import testingsystem_assignment_10.entity.Department;
+import testingsystem_assignment_10.ultis.JdbcUtils;
+import testingsystem_assignment_10.ultis.properties.MessageProperties;
 
 /**
  *
  * @author heohu
  */
-public class Excercise2 {
-    private JdbcUtils jdbcUtils;
+public class DepartmentDao {
+
+	private JdbcUtils jdbcUtils;
 
 	private MessageProperties messagePoperties;
-	public Excercise2() throws IOException, SQLException, ClassNotFoundException {
+
+	
+
+	public DepartmentDao() throws IOException, SQLException, ClassNotFoundException {
 		jdbcUtils = new JdbcUtils();
 
 		messagePoperties = new MessageProperties();
 	}
-
-	public List<Department> getDepartments()
-			throws FileNotFoundException, ClassNotFoundException, IOException, SQLException {
-
+         //Question 1:
+	
+	public List<Department> getDepartments()throws FileNotFoundException, ClassNotFoundException, IOException, SQLException 
+			
 		List<Department> departments = new ArrayList<>();
 
 		// Step 2: get connection
@@ -61,6 +62,7 @@ public class Excercise2 {
 		return departments;
 	}
 
+	//Question 2:
 	public Department getDepartmentByID(int id) throws Exception {
 
 		// get connection
@@ -87,12 +89,12 @@ public class Excercise2 {
 
 		} else {
 			jdbcUtils.disconnect();
-			throw new Exception (
+			throw new Exception(
 					messagePoperties.getProperty("department.getDepartmentByID.cannotFindDepartmentById") + id);
 		}
 	}
 
-	
+	//Question 3:
 	public boolean isDepartmentNameExists(String name) throws SQLException, IOException, ClassNotFoundException {
 
 		// get connection
@@ -119,7 +121,7 @@ public class Excercise2 {
 		}
 	}
 
-	
+	//Question 4:
 	public void createDepartment(String name) throws Exception {
 
 		// check name exist
@@ -146,6 +148,7 @@ public class Excercise2 {
 		jdbcUtils.disconnect();
 	}
 
+	//Question 5:
 	public boolean isDepartmentIdExists(int id) throws SQLException, IOException, ClassNotFoundException {
 
 		// get connection
@@ -172,7 +175,7 @@ public class Excercise2 {
 		}
 	}
 
-	
+	//Question 6:
 	public void updateDepartment(int id, String newName) throws SQLException, Exception {
 
 		// check department id exist
@@ -200,7 +203,7 @@ public class Excercise2 {
 		// disconnect
 		jdbcUtils.disconnect();
 	}
-
+        //Question 7:
 	public void deleteDepartment(int id) throws Exception {
 
 		// check department id exist

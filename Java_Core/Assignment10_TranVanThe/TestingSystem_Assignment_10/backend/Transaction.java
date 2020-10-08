@@ -1,53 +1,69 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-package backend;
+package testingsystem_assignment_10.backend;
 
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import testingsystem_assignment_10.ultis.JdbcUtils;
+
 /**
  *
  * @author heohu
  */
-public class Excercise4 {
-    private JdbcUtils jdbcUtils;
+public class Transaction {
 
-	public Excercise4() throws ClassNotFoundException, IOException, SQLException {
+	private JdbcUtils jdbcUtils;
+
+	public Transaction() throws ClassNotFoundException, IOException, SQLException {
 		jdbcUtils = new JdbcUtils();
 	}
 
 	// Transaction
 	public void deleteDepartmentUsingTransaction(int idDepartment) throws Exception {
+
+		// get connection
 		Connection connection = jdbcUtils.connect();
+
+		// turn off auto commit
 		connection.setAutoCommit(false);
-		// xoa nhan vien
+
+		// delete employees
 		String sql1 = "	DELETE FROM `Account` WHERE DepartmentID = ?";
 		PreparedStatement preparedStatement1 = connection.prepareStatement(sql1);
+
+		// set parameter
 		preparedStatement1.setInt(1, idDepartment);
-		// xoa phong ban
+
+		// delete department
 		String sql2 = "	DELETE FROM Department WHERE DepartmentID = ?";
 		PreparedStatement preparedStatement2 = connection.prepareStatement(sql2);
+
+		// set parameter
 		preparedStatement2.setInt(1, idDepartment);
+
+		// excute query
 		try {
 			preparedStatement1.executeUpdate();
-			System.out.println("Xoa nhan vien thanh cong!");
+			System.out.println("delete Account success!");
+
 			preparedStatement2.executeUpdate();
-			System.out.println("Xoa phong ban thanh cong!");
+			System.out.println("delete Department success!");
+
 			// commit transaction
 			connection.commit();
 			System.out.println("Transaction Commit!");
+
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
+
 			connection.rollback();
 			System.out.println("Transaction Rollback!");
 		}
+
+		// turn on auto commit
 		connection.setAutoCommit(true);
+
 		jdbcUtils.disconnect();
 	}
 }

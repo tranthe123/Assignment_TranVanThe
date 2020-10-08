@@ -1,41 +1,40 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-package backend;
+package testingsystem_assignment_10.backend;
 
 import java.io.IOException;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import testingsystem_assignment_10.ultis.JdbcUtils;
+import testingsystem_assignment_10.ultis.properties.MessageProperties;
+
 /**
  *
  * @author heohu
  */
-public class Excercise3 {
-    private JdbcUtils jdbcUtils;
+public class CallProcedure {
+
+	private JdbcUtils jdbcUtils;
 
 	private MessageProperties messagePoperties;
 
-	private Excercise2 departmentDao;
+	private DepartmentDao departmentDao;
 
-	public Excercise3() throws ClassNotFoundException, IOException, SQLException {
+	public CallProcedure() throws ClassNotFoundException, IOException, SQLException {
 		jdbcUtils = new JdbcUtils();
 
 		messagePoperties = new MessageProperties();
 
-		departmentDao = new Excercise2();
+		departmentDao = new DepartmentDao();
 	}
 
 	// Call Procedure
 	public void deleteDepartmentUsingProcedure(int id) throws Exception {
 		// check department id exist
-//		if (!departmentDao.isDepartmentIdExists(id)) {
-//			throw new Exception(messagePoperties.getProperty("department.getDepartmentByID.cannotFindDepartmentById") + id);
-//		}
+		if (!departmentDao.isDepartmentIdExists(id)) {
+			throw new Exception(
+					messagePoperties.getProperty("department.getDepartmentByID.cannotFindDepartmentById") + id);
+		}
 
 		// if department id not exist delete
 
