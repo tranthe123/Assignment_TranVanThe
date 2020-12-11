@@ -1,4 +1,3 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -8,10 +7,6 @@
 </p>
 
 # Github 
-
-SInh viên: là Phùng Duy Quyền
-
-![image]()
 
 ☀ Tìm hiểu về Framework.
 Framework là một thư viện với các hàm được xây dựng sẵn phục vụ cho công việc lập trình website. Các lập trình viên phát triển web  sử dụng các framework để hỗ trợ công việc lập trình được nhanh hơn,tiết kiệm thời gian và đảm bảo bảo mật hơn cho hệ thống phát triển. Thường thì một Framework PHP được xây dựng trên mô hình MVC.
@@ -36,40 +31,12 @@ Framework là một thư viện với các hàm được xây dựng sẵn phụ
 
 ```
 ★ Giao diện web
-![Alt text](https://github.com/03877896065/noithat/blob/master/public/admin_asset/img/Giaodientrangchu.png)
-![Alt text](https://github.com/03877896065/noithat/blob/master/public/admin_asset/img/giaodiensp.png)
-![Alt text](https://github.com/03877896065/noithat/blob/master/public/admin_asset/img/ctsp.png)
-![Alt text](https://github.com/03877896065/noithat/blob/master/public/admin_asset/img/dathang.png)
+![Alt text](https://github.com/tranthe123/Assignment_TranVanThe/blob/master/public/admin_asset/img/Giaodientrangchu.png?raw=true)
+![Alt text](https://github.com/tranthe123/Assignment_TranVanThe/blob/master/public/admin_asset/img/giaodiensp.png)
+![Alt text](https://github.com/tranthe123/Assignment_TranVanThe/blob/master/public/admin_asset/img/ctsp.png)
+![Alt text](https://github.com/tranthe123/Assignment_TranVanThe/blob/master/public/admin_asset/img/dathang.png)
 
 ```
 
-## Intro Profile
 
-**Email** : quyen3714@gmail.com
-
-<!-- ## Update Repo Map
-
-Map your github repo name with Envato Item ID
-
-```js
-module.exports = {
-  12345678: "repo-one",
-  87654321: "repo-two",
-};
-```
-
-## Use Vercel for easy deployment
-
-```bash
-npm i -g vercel
-npm vercel
-```
-
-## Development Server
-
-Use the following command to fireup Dev Server at `http://localhost:3000/`
-
-```bash
-vercel dev
-``` -->
 
