@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Giao dien</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="fontawesome-free-5.14.0-web/css/all.css">
+	<script src="js/jquery-3.5.1.js"></script>
+	<script src="bootstrap-4.5.0-dist/js/bootstrap.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="fontawesome-free-5.14.0-web/css/all.css">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">	
+	<!-- <style >
+		p img{
+			border: 2px solid white;
+		}
+		p img:hover{
+			border: 2px solid red;
+			cursor: pointer;
+		}
+	</style> -->
+</head>
+<body>
+  <div>
+    <p class="tieude dtct"> <span class="giatri">Bàn làm việc AT120S</span></p>
+    <p class="gia dtct" id="giachitiet"><span class="nhan">Giá :</span> <span class="giatri">670.000 VND</span><input type="hidden" id="price_raw" value="670.000"></p>
+    <div class="mota dtct"> <span class="giatri">Giá có thuế VAT:737.000</span></div>
+    <p class="donvi dtct"> <span class="giatri"></span></p>
+    <div class="thuoctinh3 dtct"><span class="nhan">Nhà sản xuất :</span> <span class="giatri">Công ty Cổ Phần Nội Thất Hòa Phát</span></div>
+    <p class="baohanh dtct"><span class="nhan">Bảo hành :</span> <span class="giatri">12 Tháng</span></p>
+    <div class="thuoctinh1 dtct"><span class="nhan">Tình trạng :</span> <span class="giatri">Còn hàng</span></div>
+    <p class="likefacebook dtct">
+  <iframe width="150" src="" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:20px;" allowtransparency="true"></iframe>
+  
+</p>
+  </div>
+	<div>
+		<img src="img/cc1.jpg" width="350" id="mian-img" />
+      <p>
+      	<img src="img/cc4.jpg" width="90" />
+      	<img src="img/cc3.jpg" width="90" />
+      	<img src="img/cc5.jpg" width="90" />
+      </p>
+      <script src="js/jquery-3.5.1.js"></script>
+      <script>
+      	$(()=>{
+      		$('p img').click(function(){
+      			let imgPath = $(this).attr('src');
+      			$('#mian-img').attr('src', imgPath);
+      		})
+      	})
+      </script>
+      <div>
+      	<section>
+      <div class="container">
+        <div class="row">
+          <button style="background-color: red;" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">
+            Liên hệ
+          </button>
+          <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md5 col-lg-5 block-image">
+                      <img src="img/thongbao.jpg" class="img-responsive" />
+                    </div>
+                    <div class="col-md-6 col-lg-6 block-contact">
+                      <h3>Nhập thông tin khách hàng</h3>
+                      <form>
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Nhập tên: "/>
+                        </div>
+
+                        <div class="form-group">
+                          <input type="email" class="form-control" placeholder="Nhập E-mail"/>
+                        </div>
+
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Nhập số điện thoại"/>
+                        </div>
+
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Nhập điện chỉ"/>
+                        </div>
+                        <button type="submit" class="btn btn-success pull-left">Gửi</button>
+                      </form>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+      </div>
+	</div>
+</body>
+</html>

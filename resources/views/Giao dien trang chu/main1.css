@@ -1,0 +1,139 @@
+body,ul{
+	margin: 0px;
+	padding: 0px;font-family: Arial;
+}
+ul{
+	list-style: none;margin: 0px;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+}
+.header-main {
+	background-color: white;
+}
+.logo > a > img{
+	width: 150px;
+
+}
+.top{
+	width: 100%;
+	margin: auto;
+	display: flex;
+	padding-top: 10px;
+}
+.logo,.form-search,.title,.hotline{
+	margin-right: 6rem;
+}
+.form-search,.hotline{
+	padding-top: 25px;
+}
+.title > h3{
+	font-size: 22px;
+    color: #7f3e0e;
+    text-align: center;
+    font-weight: bold
+}
+#navbarSupportedContent{
+	padding-left: 60px;
+	background: #7f3e0e;
+}
+.active,.dropdown,.nav-item{
+	margin-right: 4rem;
+}
+.navbar-light .navbar-nav .active>.nav-link{
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+.navbar-light .navbar-nav .nav-link {
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+}
+#carouselExampleControls{
+	width: 1100px;
+	margin: auto;
+}
+.carousel-indicators{
+	position: absolute;
+}
+.noidung{
+	 width: 1100px;
+	 margin: auto;
+	 display: flex;
+}
+
+.noidung ul li a{
+	display: inline-block;
+    color: #7f3e0e;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    margin-bottom: 1.4rem;
+    padding-left: 1rem;
+}
+.noidung1,.noidung2,.noidung3,.noidung4{
+	margin-right: 3rem;
+}
+
+.noidung .title1 {
+	width: 250px;
+}
+.noidung .title1 > h3{
+   line-height: 45px;
+   font-size: 22px;
+}
+.row .title1 {
+	width: 210px;
+}
+.row .title1 > h3{
+   line-height: 45px;
+   font-size: 22px;
+   border: 10px;
+   border-radius: 5px;
+   margin-left: 10px;
+}
+.row ul li a{
+	display: inline-block;
+    color: #7f3e0e;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    margin-bottom: 1.4rem;
+    padding-left: 1rem;
+    margin-left: 25px;
+}
+.row{	
+	 border:5px solid #7f3e0e;
+     border-radius: 20px;
+     margin: auto;
+     margin-bottom: 20px;
+}
+.row .noidung1{
+	border-right: 2px solid #7f3e0e;
+	border-radius: 10px;
+	margin: auto;
+}
+.row .img > img{
+	margin: auto;
+	width: 255px;
+	margin-top: 10px;
+}
+footer{
+	background-color: #7f3e0e;
+}
+.btn-primary {
+	color: white;
+    background-color: #7f3e0e;
+    border-color: #7f3e0e;
+}
+.panel-default>.panel-heading {
+    color: white;
+    background-color: #7f3e0e;
+    border-color: #7f3e0e;
+}
+ul#menu li a{
+	color: #7f3e0e;
+	font-size: 22px;
+}
